@@ -2,6 +2,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -isystem $(TOP)/system/media/audio/include
+
 LOCAL_SRC_FILES := \
     AudioBufferProviderSource.cpp   \
     AudioStreamOutSink.cpp          \
