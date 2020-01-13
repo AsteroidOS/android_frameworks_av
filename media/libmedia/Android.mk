@@ -10,6 +10,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_FLAGS += -Werror -Wno-error=deprecated-declarations -Wall
 LOCAL_CLANG := true
 
+LOCAL_CFLAGS += -isystem $(TOP)/system/media/audio/include
+
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -84,6 +86,7 @@ LOCAL_C_INCLUDES := \
     $(TOP)/frameworks/native/include/media/openmax \
     $(TOP)/frameworks/av/include/media/ \
     $(TOP)/frameworks/av/media/libstagefright \
+    $(TOP)/system/media/audio/include \
     $(call include-path-for, audio-effects) \
     $(call include-path-for, audio-utils)
 
